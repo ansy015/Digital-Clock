@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap");
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      #clock {
+        font-size: 11rem;
+        letter-spacing: 0.3rem;
+        color: black;
+        width: 900px;
+        margin: 200px;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="clock"></div>
+    </div>
+    <script>
+      let clock = document.getElementById("clock");
+
+      setInterval(() => {
+        let date = new Date();
+        clock.innerHTML = date.toLocaleTimeString();
+      }, 1000);
+    </script>
+  </body>
+</html>
